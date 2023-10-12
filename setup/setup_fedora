@@ -1,0 +1,17 @@
+#!/bin/sh
+# DNF
+sudo dnf install alacritty zsh steam-devices -y
+sudo dnf remove firefox "libreoffice*" -y
+sudo dnf group remove LibreOffice -y
+
+# Gnome
+sudo dnf install gnome-tweaks gnome-shell-extension-no-overview gnome-shell-extension-appindicator -y
+sudo dnf remove gnome-maps gnome-logs gnome-font-viewer gnome-photos gnome-tour gnome-weather gnome-calendar gnome-characters gnome-clocks gnome-contacts totem cheese simple-scan gnome-abrt rhythmbox gnome-connections -y
+gsettings set org.gnome.mutter check-alive-timeout 60000
+
+# zram
+echo "[zram0]
+zram-size = ram * 2
+compression-algorithm = zstd" | sudo tee /usr/lib/systemd/zram-generator.conf
+sudo systemctl daemon-reload
+sudo systemctl restart systemd-zram-setup@zram0.service
