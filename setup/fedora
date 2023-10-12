@@ -1,6 +1,6 @@
 #!/bin/sh
 # DNF
-sudo dnf install stopw alacritty zsh steam-devices -y
+sudo dnf install stow alacritty zsh steam-devices -y
 sudo dnf remove firefox "libreoffice*" -y
 sudo dnf group remove LibreOffice -y
 
