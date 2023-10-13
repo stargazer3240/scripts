@@ -13,3 +13,4 @@ fwupdmgr upgrade
 printf "\n${BCYAN}Updating Nix:\n${NC}"
 nix-channel --update
 home-manager switch
+nix flake update ~/.config/home-manager/
