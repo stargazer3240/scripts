@@ -1,6 +1,6 @@
 #!/bin/sh
 # DNF
-sudo dnf install stow alacritty zsh steam-devices -y
+sudo dnf install stow alacritty zsh bat lsd neovim python3-neovim htop steam-devices -y
 sudo dnf remove firefox "libreoffice*" -y
 sudo dnf group remove LibreOffice -y
 
