@@ -6,7 +6,7 @@ sudo dnf group remove LibreOffice -y
 
 # Dotfiles
 cd ~/.dotfiles
-stow zsh alacritty git
+stow zsh alacritty git nvim
 
 # Gnome
 sudo dnf install gnome-tweaks f36-backgrounds-gnome gnome-shell-extension-no-overview gnome-shell-extension-appindicator -y
