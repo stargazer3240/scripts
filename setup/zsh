@@ -1,5 +1,0 @@
-#!/bin/sh
-git clone git@github.com:Stargazer3240/dotfiles.git ~/.dotfiles/
-cd ~/.dotfiles/
-stow zsh
-sudo lchsh fabricio

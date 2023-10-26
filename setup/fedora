@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # DNF
 sudo dnf install stow alacritty zsh bat lsd neovim python3-neovim htop steam-devices nodejs fd-find ripgrep -y
 sudo dnf group install "Ferramentas de Desenvolvimento C e Bibliotecas"

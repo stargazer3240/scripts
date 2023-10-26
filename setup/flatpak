@@ -1,6 +1,7 @@
 #!/bin/sh
+
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --reinstall flathub $(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1) -y
+flatpak install --reinstall flathub "$(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1)" -y
 flatpak remote-delete fedora
 flatpak uninstall --unused --delete-data -y
 flatpak install \
@@ -13,5 +14,5 @@ flatpak install \
 	com.github.tchx84.Flatseal \
 	com.github.Eloston.UngoogledChromium \
 	com.github.wwmm.easyeffects \
-  org.gnome.World.PikaBackup \
+	org.gnome.World.PikaBackup \
 	-y
