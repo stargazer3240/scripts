@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if [ -d ~/.dotfiles ] && command -v stow >/dev/null; then
-	cd ~/.dotfiles/ || exit
-	stow zsh
-	sudo lchsh fabricio
-fi

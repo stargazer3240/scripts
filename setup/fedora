@@ -1,14 +1,14 @@
 #!/bin/sh
 
+# Git repos
+git clone git@github.com:Stargazer3240/scripts.git ~/.scripts/
+git clone git@github.com:Stargazer3240/dotfiles.git ~/.dotfiles/
+
 # DNF
-sudo dnf install stow alacritty zsh bat lsd neovim python3-neovim htop steam-devices nodejs fd-find ripgrep -y
+sudo dnf install stow alacritty zsh bat lsd neovim python3-neovim steam-devices nodejs fd-find ripgrep -y
 sudo dnf group install "Ferramentas de Desenvolvimento C e Bibliotecas"
 sudo dnf remove firefox "libreoffice*" -y
 sudo dnf group remove LibreOffice -y
-
-# Dotfiles
-cd ~/.dotfiles
-stow zsh alacritty git nvim
 
 # Gnome
 sudo dnf install gnome-tweaks f36-backgrounds-gnome gnome-shell-extension-no-overview gnome-shell-extension-appindicator -y
@@ -21,3 +21,8 @@ zram-size = ram * 2
 compression-algorithm = zstd" | sudo tee /usr/lib/systemd/zram-generator.conf
 sudo systemctl daemon-reload
 sudo systemctl restart systemd-zram-setup@zram0.service
+
+# Dotfiles
+cd ~/.dotfiles || exit
+stow zsh alacritty git nvim
+sudo lchsh fabricio

@@ -1,4 +1,0 @@
-#!/bin/sh
-
-git clone git@github.com:Stargazer3240/scripts.git ~/.scripts/
-git clone git@github.com:Stargazer3240/dotfiles.git ~/.dotfiles/
