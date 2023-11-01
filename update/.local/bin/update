@@ -13,5 +13,5 @@ echo -e "${F_BOLD}${C_TEAL}\nUpdating Firmware:${NO_FORMAT}"
 fwupdmgr refresh
 fwupdmgr upgrade
 echo -e "${F_BOLD}${C_TEAL}\nUpdating Neovim:${NO_FORMAT}"
-nvim --headless -c "Lazy sync" -c "quit" -c "MasonUpdate" -c "quit"
-echo -e "${F_BOLD}${C_GREEN}Done!${NO_FORMAT}"
+nvim --headless -c "Lazy! sync" -c "MasonUpdate" -c "qa"
+echo -e "${F_BOLD}${C_GREEN}\nDone!${NO_FORMAT}"
