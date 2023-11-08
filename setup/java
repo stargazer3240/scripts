@@ -1,0 +1,4 @@
+#!/bin/sh
+sudo dnf install java-devel
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install intellij-idea-community --classic

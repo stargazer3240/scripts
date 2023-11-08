@@ -5,7 +5,7 @@ git clone git@github.com:Stargazer3240/scripts.git ~/.scripts/
 git clone git@github.com:Stargazer3240/dotfiles.git ~/.dotfiles/
 
 # DNF
-sudo dnf install stow alacritty zsh bat lsd neovim python3-neovim steam-devices nodejs fd-find ripgrep -y
+sudo dnf install stow alacritty zsh bat lsd neovim python3-neovim steam-devices nodejs fd-find ripgrep python3-pip snapd -y
 sudo dnf group install "Ferramentas de Desenvolvimento C e Bibliotecas"
 sudo dnf remove firefox "libreoffice*" -y
 sudo dnf group remove LibreOffice -y
@@ -26,3 +26,6 @@ sudo systemctl restart systemd-zram-setup@zram0.service
 cd ~/.dotfiles || exit
 stow zsh alacritty git nvim
 sudo lchsh fabricio
+
+cd ~/.scripts || exit
+stow upgrade
