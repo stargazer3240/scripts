@@ -5,7 +5,7 @@ git clone git@github.com:Stargazer3240/scripts.git ~/.scripts/
 git clone git@github.com:Stargazer3240/dotfiles.git ~/.dotfiles/
 
 # DNF
-sudo dnf install stow alacritty zsh bat lsd neovim python3-neovim steam-devices nodejs fd-find ripgrep python3-pip snapd -y
+sudo dnf install stow alacritty zsh bat lsd neovim python3-neovim nodejs fd-find ripgrep python3-pip snapd adw-gtk3-theme -y
 sudo dnf group install "Ferramentas de Desenvolvimento C e Bibliotecas"
 sudo dnf remove firefox "libreoffice*" -y
 sudo dnf group remove LibreOffice -y
@@ -14,6 +14,8 @@ sudo dnf group remove LibreOffice -y
 sudo dnf install gnome-tweaks f36-backgrounds-gnome gnome-shell-extension-no-overview gnome-shell-extension-appindicator -y
 sudo dnf remove gnome-maps gnome-logs gnome-font-viewer gnome-photos gnome-tour gnome-weather gnome-calendar gnome-characters gnome-clocks gnome-contacts totem cheese simple-scan gnome-abrt rhythmbox gnome-connections -y
 gsettings set org.gnome.mutter check-alive-timeout 60000
+gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.wm.preferences audible-bell false
 
 # zram
 echo "[zram0]
@@ -24,7 +26,7 @@ sudo systemctl restart systemd-zram-setup@zram0.service
 
 # Dotfiles
 cd ~/.dotfiles || exit
-stow zsh alacritty git nvim
+stow zsh alacritty git
 sudo lchsh fabricio
 
 # Update script
@@ -33,4 +35,4 @@ stow upgrade
 
 # Audio volume
 amixer set Master 50%
-amixer ser Capture 35%
+amixer set Capture 35%

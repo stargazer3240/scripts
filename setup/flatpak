@@ -1,9 +1,6 @@
 #!/bin/sh
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --reinstall flathub "$(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1)" -y
-flatpak remote-delete fedora
-flatpak uninstall --unused --delete-data -y
 flatpak install \
 	org.mozilla.firefox \
 	org.libreoffice.LibreOffice \
@@ -18,6 +15,8 @@ flatpak install \
   io.freetubeapp.FreeTube \
   org.freedesktop.Platform.VulkanLayer.MangoHud \
   org.freedesktop.Platform.ffmpeg-full \
+  org.gtk.Gtk3theme.adw-gtk3 \
+  org.gtk.Gtk3theme.adw-gtk3-dark \
 	-y
 flatpak override \
     --user \
