@@ -30,3 +30,7 @@ sudo lchsh fabricio
 # Update script
 cd ~/.scripts || exit
 stow upgrade
+
+# Audio volume
+amixer set Master 50%
+amixer ser Capture 35%
