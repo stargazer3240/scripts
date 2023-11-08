@@ -1,6 +1,0 @@
-#!/bin/sh
-
-cd ~/.ssh || exit
-chmod 700 .
-chmod 600 id_ed25519
-ssh-add

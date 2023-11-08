@@ -1,0 +1,11 @@
+#!/bin/sh
+
+cd ~/.ssh || exit
+chmod 700 .
+chmod 600 id_ed25519
+ssh-add
+
+cd ~/.gnupg || exit
+fd . -t f -E "pubring.kbx" -x chmod 600 {} \;
+fd . -t d -x chmod 700 {} \;
+chmod 700 .
