@@ -15,4 +15,17 @@ flatpak install \
 	com.github.Eloston.UngoogledChromium \
 	com.github.wwmm.easyeffects \
 	org.gnome.World.PikaBackup \
+  io.freetubeapp.FreeTube \
+  org.freedesktop.Platform.VulkanLayer.MangoHud \
+  org.freedesktop.Platform.ffmpeg-full \
 	-y
+flatpak override \
+    --user \
+    --filesystem=host-os \
+    --env=LIBVA_DRIVER_NAME=nvidia \
+    --env=LIBVA_DRIVERS_PATH=/run/host/usr/lib64/dri \
+    --env=LIBVA_MESSAGING_LEVEL=1 \
+    --env=MOZ_DISABLE_RDD_SANDBOX=1 \
+    --env=NVD_BACKEND=direct \
+    --env=MOZ_ENABLE_WAYLAND=1 \
+    org.mozilla.firefox

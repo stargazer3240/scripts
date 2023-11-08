@@ -27,5 +27,6 @@ cd ~/.dotfiles || exit
 stow zsh alacritty git nvim
 sudo lchsh fabricio
 
+# Update script
 cd ~/.scripts || exit
 stow upgrade
