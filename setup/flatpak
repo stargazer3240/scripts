@@ -2,7 +2,6 @@
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install \
-	org.mozilla.firefox \
 	org.libreoffice.LibreOffice \
 	org.gimp.GIMP \
 	it.mijorus.gearlever \
@@ -15,16 +14,4 @@ flatpak install \
   io.freetubeapp.FreeTube \
   org.freedesktop.Platform.VulkanLayer.MangoHud \
   org.freedesktop.Platform.ffmpeg-full \
-  org.gtk.Gtk3theme.adw-gtk3 \
-  org.gtk.Gtk3theme.adw-gtk3-dark \
 	-y
-flatpak override \
-    --user \
-    --filesystem=host-os \
-    --env=LIBVA_DRIVER_NAME=nvidia \
-    --env=LIBVA_DRIVERS_PATH=/run/host/usr/lib64/dri \
-    --env=LIBVA_MESSAGING_LEVEL=1 \
-    --env=MOZ_DISABLE_RDD_SANDBOX=1 \
-    --env=NVD_BACKEND=direct \
-    --env=MOZ_ENABLE_WAYLAND=1 \
-    org.mozilla.firefox
