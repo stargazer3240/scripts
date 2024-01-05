@@ -2,16 +2,17 @@
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install \
+  com.calibre_ebook.calibre \
 	org.libreoffice.LibreOffice \
 	org.gimp.GIMP \
 	it.mijorus.gearlever \
 	io.github.celluloid_player.Celluloid \
-	com.valvesoftware.Steam \
 	com.github.tchx84.Flatseal \
 	com.github.Eloston.UngoogledChromium \
 	com.github.wwmm.easyeffects \
-	org.gnome.World.PikaBackup \
   io.freetubeapp.FreeTube \
-  org.freedesktop.Platform.VulkanLayer.MangoHud \
   org.freedesktop.Platform.ffmpeg-full \
+  com.usebottles.bottles \
+  com.discordapp.Discord \
+  com.obsproject.Studio \
 	-y
