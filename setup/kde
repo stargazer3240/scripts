@@ -6,6 +6,9 @@ sudo dnf remove kmail konsole khelpcenter plasma-welcome mediawriter kmag kfind 
   kmail kmines kmahjongg kmouth -y
 sudo dnf install pinentry-gnome3 -y
 
+cd ~/.dotfiles || exit
+stow kde
+
 # Disable PC speaker
 sudo rmmod pcspkr
 
