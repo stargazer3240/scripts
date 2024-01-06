@@ -1,3 +1,19 @@
 #!/bin/sh
 
-sudo dnf remove kmail konsole khelpcenter plasma-welcome mediawriter kmag kfind kgpg kwalletmanager kaddressbook kcharselect kmousetool qt5-qdbusviewer elisa-player kamoso dragon kpat krdc krfb konversation kde-connect akregator kmail kmines kmahjongg kmouth -y
+sudo dnf remove kmail konsole khelpcenter plasma-welcome mediawriter kmag kfind \
+  kgpg kwalletmanager kaddressbook kcharselect kmousetool qt5-qdbusviewer \
+  elisa-player kamoso dragon kpat krdc krfb konversation kde-connect akregator \
+  kmail kmines kmahjongg kmouth -y
+
+# Disable PC speaker
+sudo rmmod pcspkr
+
+# Fix Alacritty icon
+ICON_PATH="$HOME/.icons"
+mkdir "$ICON_PATH"
+ICON_PATH="$ICON_PATH/Alacritty.png"
+convert /usr/share/pixmaps/Alacritty.svg -transparent white "$ICON_PATH"
+APP_PATH="~/.local/share/applications"
+cp /usr/share/applications/Alacritty.desktop "$APP_PATH"
+APP_PATH="$APP_PATH/Alacritty.desktop"
+sed -i "s:.*Icon=.*:Icon=$ICON_PATH:" "$APP_PATH"
