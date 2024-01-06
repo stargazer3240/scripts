@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sudo dnf remove kmail konsole khelpcenter plasma-welcome mediawriter kmag kfind kgpg kwalletmanager kaddressbook kcharselect kmousetool qt5-qdbusviewer elisa-player kamoso dragon kpat krdc krfb konversation kde-connect akregator kmail kmines kmahjongg kmouth -y
