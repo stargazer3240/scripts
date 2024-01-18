@@ -15,4 +15,5 @@ flatpak install \
   com.usebottles.bottles \
   com.discordapp.Discord \
   com.obsproject.Studio \
+  com.borgbase.Vorta \
 	-y
