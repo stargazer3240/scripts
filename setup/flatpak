@@ -3,10 +3,8 @@
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install \
   com.calibre_ebook.calibre \
-	org.libreoffice.LibreOffice \
 	org.gimp.GIMP \
 	it.mijorus.gearlever \
-	io.github.celluloid_player.Celluloid \
 	com.github.tchx84.Flatseal \
 	com.github.Eloston.UngoogledChromium \
 	com.github.wwmm.easyeffects \
@@ -17,3 +15,7 @@ flatpak install \
   com.obsproject.Studio \
   com.borgbase.Vorta \
 	-y
+
+if [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
+  flatpak install org.kde.elisa org.kde.haruna
+fi
