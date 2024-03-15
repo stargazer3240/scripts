@@ -2,8 +2,8 @@
 
 if [ ! -d ~/.local/share/fonts/Hack ]; then
 	mkdir -p ~/.local/share/fonts/Hack
-	cd ~/.local/share/fonts/Hack || exit
-	curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz
-	tar -xvf Hack.tar.xz
-	rm Hack.tar.xz
 fi
+cd ~/.local/share/fonts/Hack || exit
+curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz
+tar -xvf Hack.tar.xz
+rm Hack.tar.xz

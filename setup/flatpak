@@ -2,6 +2,7 @@
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install \
+  com.valvesoftware.Steam \
   com.calibre_ebook.calibre \
 	org.gimp.GIMP \
 	it.mijorus.gearlever \
