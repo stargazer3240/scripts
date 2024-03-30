@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "[zram0]
-zram-size = ram * 2
+zram-size = ram * 4
 compression-algorithm = zstd" | sudo tee /usr/lib/systemd/zram-generator.conf
 sudo systemctl daemon-reload
 sudo systemctl restart systemd-zram-setup@zram0.service
