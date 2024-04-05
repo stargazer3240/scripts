@@ -7,6 +7,8 @@
 # DNF
 sudo dnf install stow alacritty zsh bat lsd neovim python3-neovim nodejs fd-find ripgrep python3-pip snapd just -y
 sudo dnf group install "Ferramentas de Desenvolvimento C e Bibliotecas" -y
+sudo dnf remove "libreoffice*" -y
+sudo dnf group remove "LibreOffice" -y
 
 # Dotfiles
 cd ~/.dotfiles || exit

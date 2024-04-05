@@ -1,22 +1,14 @@
 #!/bin/sh
 
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install \
-  com.valvesoftware.Steam \
-  com.calibre_ebook.calibre \
 	org.gimp.GIMP \
 	it.mijorus.gearlever \
 	com.github.tchx84.Flatseal \
 	com.github.Eloston.UngoogledChromium \
-	com.github.wwmm.easyeffects \
   io.freetubeapp.FreeTube \
   org.freedesktop.Platform.ffmpeg-full \
-  com.usebottles.bottles \
-  com.discordapp.Discord \
-  com.obsproject.Studio \
-  com.borgbase.Vorta \
 	-y
 
 if [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
-  flatpak install org.kde.elisa org.kde.haruna
+  flatpak install org.kde.elisa org.kde.haruna com.borgbase.Vorta
 fi
