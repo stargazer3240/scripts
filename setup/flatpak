@@ -1,14 +1,12 @@
 #!/bin/sh
 
 flatpak install \
-	org.gimp.GIMP \
-	it.mijorus.gearlever \
-	com.github.tchx84.Flatseal \
-	com.github.Eloston.UngoogledChromium \
+  org.gimp.GIMP \
+  it.mijorus.gearlever \
+  com.github.tchx84.Flatseal \
   io.freetubeapp.FreeTube \
   org.freedesktop.Platform.ffmpeg-full \
-	-y
-
-if [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
-  flatpak install org.kde.elisa org.kde.haruna com.borgbase.Vorta
-fi
+  org.gnome.World.PikaBackup \
+  io.freetubeapp.FreeTube \
+  com.calibre_ebook.calibre \
+  -y

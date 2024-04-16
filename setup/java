@@ -1,8 +1,6 @@
 #!/bin/sh
 
 curl -s "https://get.sdkman.io" | bash
-source ~/.zshrc
+source "/home/fabricio/.sdkman/bin/sdkman-init.sh"
 sdk install java
 sdk install maven
-sudo ln -s /var/lib/snapd/snap /snap
-sudo snap install intellij-idea-community --classic

@@ -5,10 +5,11 @@
 # git clone git@github.com:Stargazer3240/dotfiles.git ~/.dotfiles/
 
 # DNF
-sudo dnf install stow alacritty zsh bat lsd neovim python3-neovim nodejs fd-find ripgrep python3-pip snapd just -y
+sudo dnf install stow alacritty zsh bat lsd neovim python3-neovim nodejs fd-find ripgrep python3-pip snapd just libreoffice-langpack-pt-BR -y
 sudo dnf group install "Ferramentas de Desenvolvimento C e Bibliotecas" -y
-sudo dnf remove "libreoffice*" -y
-sudo dnf group remove "LibreOffice" -y
+sudo dnf remove mediawriter -y
+cp /usr/share/applications/nvim.desktop .local/share/applications/
+echo Hidden=true >> .local/share/applications/nvim.desktop
 
 # Dotfiles
 cd ~/.dotfiles || exit

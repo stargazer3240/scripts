@@ -14,4 +14,10 @@ fwupdmgr refresh
 fwupdmgr upgrade
 echo -e "${F_BOLD}${C_TEAL}\nUpdating Neovim:${NO_FORMAT}"
 nvim --headless -c "Lazy! sync" -c "MasonUpdate" -c "qa"
+if [ -d "$HOME/.sdkman" ]; then
+  echo -e "${F_BOLD}${C_TEAL}\n\nUpdating SDKMAN:${NO_FORMAT}"
+  source "$HOME/.sdkman/bin/sdkman-init.sh"
+  sdk update
+  sdk selfupdate
+fi
 echo -e "${F_BOLD}${C_GREEN}\nDone!${NO_FORMAT}"
