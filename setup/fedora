@@ -9,10 +9,6 @@ sudo dnf install stow alacritty zsh bat lsd neovim python3-neovim nodejs fd-find
 sudo dnf group install "Ferramentas de Desenvolvimento C e Bibliotecas" -y
 sudo dnf remove mediawriter -y
 
-# Dotfiles
-cd ~/.dotfiles || exit
-stow zsh alacritty git
-
 # Audio volume
 amixer set Master 50%
 amixer set Capture 35%
