@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cp /usr/share/applications/nvim.desktop .local/share/applications/
+echo Hidden=true >> .local/share/applications/nvim.desktop

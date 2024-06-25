@@ -1,5 +1,5 @@
 #!/bin/sh
 
 sudo dnf install gnome-tweaks f36-backgrounds-gnome gnome-shell-extension-no-overview gnome-shell-extension-appindicator -y
-sudo dnf remove gnome-maps gnome-logs gnome-font-viewer gnome-photos gnome-tour gnome-weather gnome-calendar gnome-characters gnome-clocks gnome-contacts totem cheese simple-scan gnome-abrt rhythmbox gnome-connections gnome-boxes -y
+sudo dnf remove gnome-maps gnome-logs gnome-font-viewer gnome-tour gnome-weather gnome-calendar gnome-characters gnome-clocks gnome-contacts totem simple-scan gnome-abrt rhythmbox gnome-connections gnome-boxes snapshot -y
 # sudo lchsh fabricio

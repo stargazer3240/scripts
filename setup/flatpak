@@ -6,7 +6,7 @@ flatpak install \
   com.github.tchx84.Flatseal \
   io.freetubeapp.FreeTube \
   org.freedesktop.Platform.ffmpeg-full \
-  org.gnome.World.PikaBackup \
+  com.borgbase.Vorta \
   io.freetubeapp.FreeTube \
   com.calibre_ebook.calibre \
   -y
