@@ -9,4 +9,5 @@ flatpak install \
   com.borgbase.Vorta \
   io.freetubeapp.FreeTube \
   com.calibre_ebook.calibre \
+  org.libreoffice.LibreOffice \
   -y
