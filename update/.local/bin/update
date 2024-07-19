@@ -6,6 +6,8 @@ F_BOLD="\033[1m"
 echo -e "${F_BOLD}${C_TEAL}Updating DNF:${NO_FORMAT}"
 sudo dnf upgrade -y
 sudo dnf autoremove -y
+echo -e "${F_BOLD}${C_TEAL}Updating distrobox:${NO_FORMAT}"
+distrobox upgrade --all
 echo -e "${F_BOLD}${C_TEAL}\nUpdating Flatpak:${NO_FORMAT}"
 flatpak upgrade -y
 flatpak uninstall --unused --delete-data
@@ -13,7 +15,7 @@ echo -e "${F_BOLD}${C_TEAL}\nUpdating Firmware:${NO_FORMAT}"
 fwupdmgr refresh
 fwupdmgr upgrade
 echo -e "${F_BOLD}${C_TEAL}\nUpdating Neovim:${NO_FORMAT}"
-nvim --headless -c "Lazy! sync" -c "MasonUpdate" -c "qa"
+nvim --headless -c "Lazy! sync" -c "Mason" -c "MasonUpdate" -c "qa"
 if [ -d "$HOME/.sdkman" ]; then
   echo -e "${F_BOLD}${C_TEAL}\n\nUpdating SDKMAN:${NO_FORMAT}"
   source "$HOME/.sdkman/bin/sdkman-init.sh"
