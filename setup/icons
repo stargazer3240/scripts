@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ ! -d ~/.local/share/applications/ ]; then
+  mkdir -p ~/.local/share/applications/
+fi
+cp /usr/share/applications/nvim.desktop ~/.local/share/applications/
+cp /usr/share/applications/fish.desktop ~/.local/share/applications/
+echo Hidden=true >>~/.local/share/applications/nvim.desktop >>~/.local/share/applications/fish.desktop
