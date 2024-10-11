@@ -6,8 +6,9 @@ F_BOLD="\033[1m"
 echo -e "${F_BOLD}${C_TEAL}Updating DNF:${NO_FORMAT}"
 sudo dnf upgrade -y
 sudo dnf autoremove -y
-echo -e "${F_BOLD}${C_TEAL}Updating distrobox:${NO_FORMAT}"
-distrobox upgrade --all
+echo -e "${F_BOLD}${C_TEAL}Updating brew:${NO_FORMAT}"
+brew update
+brew upgrade
 echo -e "${F_BOLD}${C_TEAL}\nUpdating Flatpak:${NO_FORMAT}"
 flatpak upgrade -y
 flatpak uninstall --unused --delete-data
