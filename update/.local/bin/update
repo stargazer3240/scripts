@@ -23,4 +23,12 @@ if [ -d "$HOME/.sdkman" ]; then
   sdk update
   sdk selfupdate
 fi
+if [ -d "$HOME/.ghcup" ]; then
+  echo -e "${F_BOLD}${C_TEAL}\n\nUpdating GHCup:${NO_FORMAT}"
+  ghcup upgrade
+fi
+if [ -e "$HOME/.cargo/bin/rustup" ]; then
+  echo -e "${F_BOLD}${C_TEAL}\n\nUpdating Rustup:${NO_FORMAT}"
+  rustup upgrade
+fi
 echo -e "${F_BOLD}${C_GREEN}\nDone!${NO_FORMAT}"
