@@ -8,4 +8,5 @@ flatpak install \
   com.borgbase.Vorta \
   com.calibre_ebook.calibre \
   org.libreoffice.LibreOffice \
-  -y
+  com.bitwarden.desktop
+-y
