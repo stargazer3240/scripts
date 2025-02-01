@@ -2,7 +2,6 @@
 
 flatpak install \
   org.gimp.GIMP \
-  it.mijorus.gearlever \
   com.github.tchx84.Flatseal \
   io.freetubeapp.FreeTube \
   org.freedesktop.Platform.ffmpeg-full \
