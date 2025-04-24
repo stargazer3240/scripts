@@ -8,5 +8,7 @@ flatpak install \
   com.borgbase.Vorta \
   com.calibre_ebook.calibre \
   org.libreoffice.LibreOffice \
-  com.bitwarden.desktop
+  com.bitwarden.desktop \
+  it.mijorus.gearlever \
+  io.github.celluloid_player.Celluloid
 -y
