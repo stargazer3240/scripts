@@ -1,8 +1,9 @@
 #!/bin/sh
 
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf groupupdate core -y
-sudo dnf upgrade -y
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
+sudo dnf install rpmfusion-\*-appstream-data
+sudo dnf upgrade -y --refresh
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
-sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
-sudo dnf groupupdate sound-and-video -y
+sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+sudo dnf update @sound-and-video -y
