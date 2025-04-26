@@ -34,6 +34,6 @@ if [ -e "$HOME/.cargo/bin/rustup" ]; then
 fi
 if [ -e "$HOME/.config/fish/functions/fisher.fish" ]; then
   echo -e "${F_BOLD}${C_TEAL}\n\nUpdating Fisher:${NO_FORMAT}"
-  exec fish ./fisher
+  exec fish "$HOME/.local/bin/fisher"
 fi
 echo -e "${F_BOLD}${C_GREEN}\nDone!${NO_FORMAT}"
