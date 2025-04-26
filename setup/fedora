@@ -6,8 +6,8 @@
 
 # DNF
 sudo dnf install stow fish bat lsd neovim python3-neovim fd-find ripgrep python3-pip just fzf -y
-sudo dnf group install "Ferramentas de Desenvolvimento C e Bibliotecas" -y
-sudo dnf remove mediawriter libreoffice* -y
+sudo dnf install @c-development -y
+sudo dnf remove mediawriter libreoffice* @libreoffice -y
 
 # Audio volume
 amixer set Master 50%
