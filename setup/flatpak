@@ -6,7 +6,6 @@ flatpak install \
   io.freetubeapp.FreeTube \
   org.freedesktop.Platform.ffmpeg-full \
   com.borgbase.Vorta \
-  com.calibre_ebook.calibre \
   org.libreoffice.LibreOffice \
   com.bitwarden.desktop \
   it.mijorus.gearlever \

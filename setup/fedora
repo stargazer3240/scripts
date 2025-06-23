@@ -5,7 +5,7 @@
 # git clone git@github.com:Stargazer3240/dotfiles.git ~/.dotfiles/
 
 # DNF
-sudo dnf install stow fish bat lsd neovim python3-neovim fd-find ripgrep python3-pip just fzf -y
+sudo dnf install stow fish bat lsd neovim python3-neovim fd-find ripgrep python3-pip just fzf calibre -y
 sudo dnf install @c-development -y
 sudo dnf remove mediawriter libreoffice* @libreoffice -y
 
